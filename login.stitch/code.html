@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fisco Digital - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#8a0000",
+                "background-light": "#f8f5f5",
+                "background-dark": "#1a0b0b",
+                "neutral-light": "#f3f0f0",
+                "neutral-medium": "#a38e8e",
+                "neutral-dark": "#4a3c3c",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+            background: radial-gradient(circle at 0% 0%, rgba(138, 0, 0, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-neutral-dark dark:text-neutral-light min-h-screen font-display flex flex-col">
+<nav class="w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons-outlined text-xl">account_balance</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-primary">Fisco<span class="font-light text-neutral-dark dark:text-white">Digital</span></span>
+</div>
+<div class="flex items-center gap-4 text-sm">
+<button class="text-neutral-medium hover:text-primary transition-colors font-medium">Suporte</button>
+<div class="h-4 w-px bg-neutral-light"></div>
+<a class="text-primary font-bold hover:underline" href="#">Acesso Público</a>
+</div>
+</div>
+</nav>
+<main class="flex-grow flex items-center hero-gradient">
+<div class="max-w-7xl mx-auto px-6 w-full py-12">
+<div class="grid lg:grid-cols-2 gap-12 items-start">
+<div class="lg:pt-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 text-primary text-[10px] font-bold rounded-full mb-6 tracking-widest uppercase">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Sistemas Operacionais
+                </div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-neutral-dark dark:text-white leading-tight">
+                    Gestão fiscal e logística <br/>
+<span class="text-primary">em um só lugar.</span>
+</h1>
+<p class="mt-4 text-lg text-neutral-medium max-w-md leading-relaxed">
+                    Acesse sua plataforma corporativa para gerenciar documentos, fretes e conformidade em tempo real.
+                </p>
+<div class="mt-10 flex items-center gap-4">
+<button class="group flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+<span>Por que Fisco Digital?</span>
+<span class="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform">info</span>
+</button>
+</div>
+</div>
+<div class="flex justify-center lg:justify-end">
+<div class="w-full max-w-md bg-white dark:bg-neutral-dark/10 p-8 rounded-xl shadow-2xl border border-primary/10 backdrop-blur-sm">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-neutral-dark dark:text-white">Bem-vindo de volta</h2>
+<p class="text-sm text-neutral-medium mt-1 font-medium">Identifique-se para continuar para o painel.</p>
+</div>
+<form class="space-y-5">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-neutral-medium mb-2">E-mail Corporativo</label>
+<div class="relative">
+<span class="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-medium text-lg">mail</span>
+<input autofocus="" class="w-full pl-10 pr-4 py-3 rounded border border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" placeholder="nome@empresa.com.br" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block text-xs font-bold uppercase tracking-wider text-neutral-medium">Senha</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Esqueceu?</a>
+</div>
+<div class="relative">
+<span class="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-medium text-lg">lock</span>
+<input class="w-full pl-10 pr-10 py-3 rounded border border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" placeholder="••••••••" type="password"/>
+<button class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-neutral-medium text-lg hover:text-primary" type="button">visibility</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary border-neutral-light" id="remember" type="checkbox"/>
+<span class="text-xs text-neutral-medium group-hover:text-neutral-dark transition-colors">Lembrar acesso</span>
+</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 uppercase tracking-widest text-sm" type="submit">
+<span>Entrar no Sistema</span>
+<span class="material-icons-outlined text-sm">login</span>
+</button>
+</form>
+<div class="mt-8 pt-6 border-t border-neutral-light dark:border-neutral-dark flex flex-col gap-4">
+<div class="flex items-center justify-center gap-2 text-[10px] font-bold text-neutral-medium uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm text-green-600">verified_user</span>
+<span>Acesso Seguro e Criptografado</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full border-t border-primary/10 bg-white dark:bg-background-dark py-8">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-[11px] font-bold text-neutral-medium uppercase tracking-[0.2em]">
+            © 2024 Fisco Digital Ltda.
+        </div>
+<div class="flex gap-8 text-[11px] font-bold text-neutral-medium uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="hover:text-primary transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-primary transition-colors" href="#">SLA</a>
+</div>
+</div>
+</footer>
+
+</body></html>
