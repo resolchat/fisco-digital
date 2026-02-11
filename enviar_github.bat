@@ -1,20 +1,22 @@
 @echo off
-REM Script para enviar codigo para o GitHub usando o caminho absoluto do Git
+REM Script otimizado para enviar alteracoes para o GitHub
+echo.
+echo === SINCRONIZANDO COM GITHUB ===
+echo.
 
-set GIT_PATH="C:\Program Files\Git\cmd\git.exe"
+echo Adicionando alteracoes...
+git add .
 
-echo Configurando repositorio remoto...
-%GIT_PATH% remote remove origin 2>nul
-%GIT_PATH% remote add origin https://github.com/resolchat/fisco-digital.git
+echo Criando commit...
+set /p msg="Digite a mensagem do commit (ou pressione Enter para 'Update'): "
+if "%msg%"=="" set msg=Update
 
-echo Renomeando branch para main...
-%GIT_PATH% branch -M main
+git commit -m "%msg%"
+
+echo Enviando para o branch main...
+git push origin main
 
 echo.
-echo Enviando arquivos...
-echo ATENCAO: Uma janela de login do GitHub pode se abrir. Faca o login nela.
-echo.
-%GIT_PATH% push -u origin main
-
+echo === CONCLUIDO! SITE ATUALIZADO NO GITHUB PAGES ===
 echo.
 pause
